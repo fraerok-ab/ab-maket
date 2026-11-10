@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>А+Б — макет: фон блока «Портфолио», 5 вариантов (10.11.2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:"Golos Text",Arial,sans-serif;color:#111;background:#fff}
+.wrap{max-width:1230px;margin:0 auto;padding:0 24px}
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+.top .wrap{display:flex;align-items:center;gap:14px;height:60px}
+.top b{font:600 15px "Golos Text";white-space:nowrap}
+.top nav{display:flex;gap:6px;margin-left:auto}
+.top nav a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#f1ece6;color:#111;text-decoration:none;font-weight:600}
+.top nav a.on{background:#B6D80B}
+.intro{padding:40px 0 10px}
+.intro h1{font:600 34px/1.1 Cormorant,Georgia,serif;text-transform:uppercase;margin:0 0 10px}
+.intro p{margin:0;color:#555;max-width:760px;line-height:1.5}
+.stub{padding:34px 0}
+.stub .wrap>div{background:#111;color:#fff;border-radius:14px;padding:22px 26px;display:flex;gap:40px;flex-wrap:wrap}
+.stub b{font:600 30px Cormorant,Georgia,serif;display:block}.stub b i{color:#B6D80B;font-style:normal}
+.stub small{color:#aaa}
+.label{display:flex;align-items:center;gap:12px;margin:0 0 14px}
+.label .n{width:44px;height:44px;border-radius:50%;background:#B6D80B;display:grid;place-items:center;font:600 20px "Golos Text"}
+.label h2{margin:0;font:600 26px/1.1 Cormorant,Georgia,serif;text-transform:uppercase}
+.label span{color:#666;font-size:14px}
+.pf{position:relative;isolation:isolate;padding:46px 0 50px}
+.bg{position:absolute;inset:-4px 0;overflow:hidden;z-index:-1;background:#ece9e4}
+.bg img{position:absolute;left:-4%;width:108%;top:-12%;height:124%;object-fit:cover;will-change:transform,filter;filter:blur(var(--b,14px)) saturate(.95) brightness(1.02);transform:translate3d(0,var(--y,0px),0) scale(1.06)}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,244,240,.25),rgba(246,244,240,0) 20%,rgba(246,244,240,0) 80%,rgba(246,244,240,.3))}
+.pf-h{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(0,0,0,.25);padding-top:16px;margin-bottom:18px}
+.pf-h h3{margin:0;font:500 26px Cormorant,Georgia,serif;text-transform:uppercase}
+.pf-h a{background:#B6D80B;color:#111;font-size:12px;padding:6px 12px;border-radius:999px;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.card{background:#fff;border:1px solid rgba(17,17,17,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.10);display:flex;flex-direction:column;text-decoration:none;color:#111;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.cap{display:flex;gap:12px;padding:16px 18px 4px;font:600 16px/1.3 "Golos Text"}
+.cap span{flex:1}
+.eyes{display:inline-flex;align-items:center;gap:5px;font:600 15px "Golos Text";flex:none}
+.eyes svg{width:24px;height:15px}
+.yr{margin:8px 18px 0;align-self:flex-start;border-radius:999px;background:#F1ECE6;padding:4px 10px;font-size:12px}
+.meta{margin:8px 18px 18px;font-size:12.5px;color:#6e6e73;line-height:1.4}
+.pager{display:flex;justify-content:flex-end;gap:8px;margin-top:22px}
+.pager span{min-width:34px;height:34px;border-radius:999px;display:grid;place-items:center;background:#fff;border:1px solid rgba(0,0,0,.12);font-size:13px;padding:0 10px}
+.pager span:first-child{background:#111;color:#fff}
+.after{padding:40px 0 70px}
+.after .wrap>div{height:120px;border-radius:20px;background:#f6f6f6;display:grid;place-items:center;color:#999;font-size:14px}
+.foot{padding:30px 0 60px;color:#888;font-size:13px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}.card{border-radius:16px}.cap{padding:12px 12px 2px;font-size:13.5px}.yr{margin:6px 12px 0;font-size:11px}.meta{margin:6px 12px 12px;font-size:11px}.top b{font-size:13px}.top nav a{width:30px;height:30px;font-size:13px}.intro h1{font-size:26px}}
+@media (prefers-reduced-motion:reduce){.bg img{transform:scale(1.06)!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><b>А+Б · фон «Портфолио»</b><nav id="nav"></nav></div></header>
+<div class="wrap intro">
+  <h1>Фон за портфолио: 5 вариантов</h1>
+  <p>Прокрутите страницу: за карточками — размытый интерьер, как через запотевшее стекло. Фон медленно смещается, пока вы листаете, и становится мутнее, когда вы доходите до карточек. Номер варианта — в зелёном кружке над каждым блоком и в шапке. Все кадры — работы студии с aplusbdesign.pro. Это макет, на сайте ничего не изменено.</p>
+</div>
+<main id="list"></main>
+<div class="wrap foot">Макет · не опубликован на сайте · 10.11.2026</div>
+<script>
+var S='https://aplusbdesign.pro';
+var V=[
+ ['Дом в Завидово, гостиная','тёплое дерево',S+'/wp-content/themes/aplusb/assets/realization/zavidovo-full/img-2235-2560.webp'],
+ ['Дом в Завидово, камин','тёмный камень',S+'/wp-content/themes/aplusb/assets/realization/zavidovo-house-tour-poster.jpg'],
+ ['Кухня-гостиная 65 м², Москва','светлый, спокойный',S+'/wp-content/uploads/2026/11/aplusb-h4102030722-01.webp'],
+ ['Спальня 55 м², Москва','мягкий серо-бежевый',S+'/wp-content/uploads/2026/11/aplusb-h4120687004-20.webp'],
+ ['Детская 65 м², Москва','светлый с цветными акцентами',S+'/wp-content/uploads/2026/11/aplusb-h4102030722-25.webp']];
+var P=[
+ [S+'/proekty/terrasa-vo-francii-38-m2/',S+'/wp-content/uploads/2026/11/aplusb-terrasa-vo-francii-38-m2-cover-4x5-2-480x600.webp','Терраса во Франции 38 м²','10','38 м² · Франция · Ландшафтный проект'],
+ [S+'/proekty/landshaft-443/',S+'/wp-content/uploads/2026/10/landshaft-443-05-480x600.webp','Участок 443 м²','6','Ландшафтный проект'],
+ [S+'/proekty/kvartira-84-grafitovaya-kukhnya-detskaya-skalodrom/',S+'/wp-content/uploads/2026/10/aplusb-spb84-02-768x960.webp','Квартира 84 м² в Санкт-Петербурге','20','84 м² · Санкт-Петербург · Визуализации'],
+ [S+'/proekty/kvartira-80-zhk-defans-premium/',S+'/wp-content/uploads/2026/11/aplusb-kvartira-80-zhk-defans-premium-cover-4x5-1-480x600.webp','Квартира 80 м² в ЖК «Дефанс Премиум»','10','80 м² · ЖК «Дефанс Премиум», Санкт-Петербург · Визуализации'],
+ [S+'/proekty/kvartira-67-spb-olivkovyy/',S+'/wp-content/uploads/2026/10/aplusb-kvartira-67-spb-olivkovyy-002-480x600.webp','Квартира 67 м² в Санкт-Петербурге','11','67 м² · Санкт-Петербург · Визуализации'],
+ [S+'/proekty/vannaya-komnata-14-m2/',S+'/wp-content/uploads/2026/10/aplusb-vannaya-komnata-14-m2-002-480x600.webp','Ванная комната 14 м²','4','14 м² · Визуализации']];
+var EYE='<svg viewBox="0 0 64 40" aria-hidden="true"><circle cx="18" cy="20" r="14" fill="#fff" stroke="#111" stroke-width="4"/><circle cx="46" cy="20" r="14" fill="#fff" stroke="#111" stroke-width="4"/><circle cx="18" cy="21" r="6.5" fill="#111" stroke="#B6D80B" stroke-width="2.5"/><circle cx="46" cy="21" r="6.5" fill="#111" stroke="#B6D80B" stroke-width="2.5"/></svg>';
+var cards=P.map(function(p){return '<a class="card" href="'+p[0]+'" target="_blank" rel="noopener"><img src="'+p[1]+'" alt="'+p[2]+'" loading="lazy"><div class="cap"><span>'+p[2]+'</span><span class="eyes">'+EYE+p[3]+'</span></div><p class="yr">Год проекта: 2026</p><p class="meta">'+p[4]+'</p></a>';}).join('');
+var html='',nav='';
+V.forEach(function(v,i){var n=i+1;nav+='<a href="#v'+n+'" data-n="'+n+'">'+n+'</a>';
+html+='<section id="v'+n+'"><div class="stub"><div class="wrap"><div><span><b>с 2011</b><small>работаем 15 лет</small></span><span><b>700<i>+</i></b><small>выполненных проектов</small></span><span><b>26 000<i>+</i></b><small>м² спроектировано</small></span></div></div></div>'+
+'<div class="wrap"><div class="label"><div class="n">'+n+'</div><div><h2>Вариант '+n+'</h2><span>'+v[0]+' — '+v[1]+'</span></div></div></div>'+
+'<div class="pf"><div class="bg"><img src="'+v[2]+'" alt="" decoding="async"></div><div class="wrap"><div class="pf-h"><h3>Портфолио</h3><a href="'+S+'/portfolio/" target="_blank" rel="noopener">Всё портфолио ↗</a></div><div class="grid">'+cards+'</div><div class="pager"><span>1</span><span>2</span><span>3</span><span>…</span><span>130</span><span>Ещё проекты →</span></div></div></div>'+
+'<div class="after"><div class="wrap"><div>Следующий блок главной («Реализация наших проектов») — фон сюда не заходит</div></div></div></section>';});
+document.getElementById('list').innerHTML=html;document.getElementById('nav').innerHTML=nav;
+var pfs=[].slice.call(document.querySelectorAll('.pf')),navs=[].slice.call(document.querySelectorAll('#nav a'));
+var red=matchMedia('(prefers-reduced-motion: reduce)').matches,tk=false;
+function tick(){tk=false;var vh=innerHeight,cur=0;
+pfs.forEach(function(s,i){var r=s.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
+var p=Math.min(1,Math.max(0,(vh-r.top)/(r.height+vh)));var img=s.querySelector('.bg img');
+if(!red)img.style.setProperty('--y',((p-.5)*-160).toFixed(1)+'px');
+img.style.setProperty('--b',(5+Math.min(1,p/0.4)*13).toFixed(1)+'px');
+if(r.top<vh*.5)cur=i+1;});
+navs.forEach(function(a){a.classList.toggle('on',+a.dataset.n===cur);});}
+addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(tick);}},{passive:true});addEventListener('resize',tick);tick();
+</script>
+</body>
+</html>
