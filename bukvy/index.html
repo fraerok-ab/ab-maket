@@ -46,8 +46,8 @@ body{margin:0;font-family:"Golos Text",Arial,sans-serif;color:#111;background:#f
 .ct .btns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .ct .btns a{height:48px;border:1px solid rgba(255,255,255,.7);border-radius:6px;display:grid;place-items:center;color:#fff;text-decoration:none;font-size:15px;background:rgba(13,13,13,.55);backdrop-filter:blur(2px)}
 /* ===== буквы ===== */
-.bw{position:absolute;left:0;top:50%;white-space:nowrap;pointer-events:none;z-index:-1;will-change:transform;font:900 45vw/.8 "Golos Text",Arial,sans-serif;letter-spacing:-.06em;text-transform:uppercase}
-.bw.sm{font-size:30vw}
+.bw{position:absolute;left:0;top:50%;white-space:nowrap;pointer-events:none;z-index:-1;will-change:transform;font:900 67.5vw/.8 "Golos Text",Arial,sans-serif;letter-spacing:-.06em;text-transform:uppercase}
+.bw.sm{font-size:45vw}
 .bw i{font-style:normal}
 /* Р1 */ .r1 .bw{color:#111}
 /* Р2 */ .r2 .bw{color:transparent;-webkit-text-stroke:2px var(--g)}
@@ -76,7 +76,7 @@ body{margin:0;font-family:"Golos Text",Arial,sans-serif;color:#111;background:#f
 <header class="top"><div class="wrap"><b>А+Б · движение букв</b><span id="nav" style="display:flex;gap:6px;flex-wrap:wrap"></span></div></header>
 <div class="wrap intro">
   <h1>Крупные буквы в движении: 10 вариантов</h1>
-  <p>Прокручивайте страницу колёсиком мыши. <b>Р1–Р5</b> — за блоком «Что говорят заказчики» на сером фоне, <b>Ч1–Ч5</b> — в чёрном блоке «Начнём с вашего пространства». Буквы (крупнее на 50 %, смещены вверх — асимметрия 70/30) едут слева направо от края до края экрана, пока вы листаете, и обрезаются краями блока, как в макете habito. Цвета студии: салатовый #B6D80B, белый, чёрный и красный Pinterest #E60023. Это макет, на сайте ничего не изменено.</p>
+  <p>Прокручивайте страницу колёсиком мыши. <b>Р1–Р5</b> — за блоком «Что говорят заказчики» на сером фоне, <b>Ч1–Ч5</b> — в чёрном блоке «Начнём с вашего пространства». Буквы (огромные: верх и низ букв срезаны краями блока, видна только середина; смещение вверх 60/40) едут слева направо от края до края экрана, пока вы листаете, и обрезаются краями блока, как в макете habito. Цвета студии: салатовый #B6D80B, белый, чёрный и красный Pinterest #E60023. Это макет, на сайте ничего не изменено.</p>
 </div>
 <main id="list"></main>
 <div class="gap"></div>
@@ -100,13 +100,13 @@ var K=[
 var cards='<div class="sum"><b>270</b><p>отзывов заказчиков с 2013 года — оригиналы можно проверить в нашей группе ВКонтакте.</p></div>'+RV.map(function(r){return '<div class="c"><p>«'+r[0]+'»</p><cite>'+r[1]+'</cite></div>';}).join('');
 var html='',nav='';
 R.forEach(function(v,i){var id='r'+(i+1);nav+='<a href="#'+id+'">'+v[0]+'</a>';
- var words=v[3].map(function(w,j){return '<div class="bw'+(j?' b2 sm':'')+'" data-dir="'+(j?-1:1)+'" style="top:'+(v[3].length>1?(j?'82%':'30%'):'30%')+'">'+w+'</div>';}).join('');
+ var words=v[3].map(function(w,j){return '<div class="bw'+(j?' b2 sm':'')+'" data-dir="'+(j?-1:1)+'" style="top:'+(v[3].length>1?(j?'88%':'22%'):'40%')+'">'+w+'</div>';}).join('');
  html+='<section id="'+id+'"><div class="wrap tag"><div class="n">'+v[0]+'</div><div><b>'+v[1]+'</b><br><span>'+v[2]+'</span></div></div>'+
  '<div class="rv '+id+'" data-fx="'+id+'">'+words+'<div class="wrap"><div class="h"><h2>Что говорят заказчики</h2><a href="https://aplusbdesign.pro/otzyvy/" target="_blank" rel="noopener">Все отзывы ›</a></div><div class="row">'+cards+'</div></div></div></section>';});
 K.forEach(function(v,i){var id='k'+(i+1);nav+='<a class="k" href="#'+id+'">'+v[0]+'</a>';
  var w=v[3][0];if(id==='k4')w=w.split('').map(function(ch){return '<span>'+ch+'</span>';}).join('');
  html+='<section id="'+id+'"><div class="wrap tag k"><div class="n">'+v[0]+'</div><div><b>'+v[1]+'</b><br><span>'+v[2]+'</span></div></div>'+
- '<div class="ct '+id+'" data-fx="'+id+'"><div class="bw'+(id==='k3'?' run sm':'')+'" data-dir="1" style="top:30%">'+w+(id==='k3'?w:'')+'</div><div class="wrap in"><div><h2>Начнём с вашего<br>пространства.</h2><p>Пришлите план и площадь — обсудим задачу и состав работ.</p></div><div class="btns"><a href="tel:+79176627750">+7 917 662-77-50</a><a href="#">Telegram ↗</a><a href="#">ВКонтакте ↗</a><a href="#">Instagram* ↗</a><a href="#">Почта</a></div></div></div></section>';});
+ '<div class="ct '+id+'" data-fx="'+id+'"><div class="bw'+(id==='k3'?' run sm':'')+'" data-dir="1" style="top:40%">'+w+(id==='k3'?w:'')+'</div><div class="wrap in"><div><h2>Начнём с вашего<br>пространства.</h2><p>Пришлите план и площадь — обсудим задачу и состав работ.</p></div><div class="btns"><a href="tel:+79176627750">+7 917 662-77-50</a><a href="#">Telegram ↗</a><a href="#">ВКонтакте ↗</a><a href="#">Instagram* ↗</a><a href="#">Почта</a></div></div></div></section>';});
 document.getElementById('list').innerHTML=html;document.getElementById('nav').innerHTML=nav;
 var blocks=[].slice.call(document.querySelectorAll('[data-fx]')),navs=[].slice.call(document.querySelectorAll('#nav a'));
 var red=matchMedia('(prefers-reduced-motion: reduce)').matches;
