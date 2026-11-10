@@ -96,7 +96,7 @@ function tick(){tk=false;var r=sec.getBoundingClientRect(),vh=innerHeight;
  img.style.setProperty('--s',red?'1.02':(1.02+0.06*k).toFixed(3)); /* лёгкий наезд, как scale(1.08) */
  img.parentNode.style.setProperty('--w',(0.12*k).toFixed(3));   /* чуть светлее — «запотевшее стекло» */
 }
-addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(tick);}},{passive:true});addEventListener('resize',tick);tick();
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
 </script>
 </body>
 </html>

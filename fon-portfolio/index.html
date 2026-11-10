@@ -96,7 +96,7 @@ if(!red)img.style.setProperty('--y',((p-.5)*-160).toFixed(1)+'px');
 img.style.setProperty('--b',(5+Math.min(1,p/0.4)*13).toFixed(1)+'px');
 if(r.top<vh*.5)cur=i+1;});
 navs.forEach(function(a){a.classList.toggle('on',+a.dataset.n===cur);});}
-addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(tick);}},{passive:true});addEventListener('resize',tick);tick();
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
 </script>
 </body>
 </html>
