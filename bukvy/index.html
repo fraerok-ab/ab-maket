@@ -76,7 +76,7 @@ body{margin:0;font-family:"Golos Text",Arial,sans-serif;color:#111;background:#f
 <header class="top"><div class="wrap"><b>А+Б · движение букв</b><span id="nav" style="display:flex;gap:6px;flex-wrap:wrap"></span></div></header>
 <div class="wrap intro">
   <h1>Крупные буквы в движении: 10 вариантов</h1>
-  <p>Прокручивайте страницу колёсиком мыши. <b>Р1–Р5</b> — за блоком «Что говорят заказчики» на сером фоне, <b>Ч1–Ч5</b> — в чёрном блоке «Начнём с вашего пространства». Буквы (огромные: верх и низ букв срезаны краями блока, видна только середина; смещение вверх 60/40) едут слева направо от края до края экрана, пока вы листаете, и обрезаются краями блока, как в макете habito. Цвета студии: салатовый #B6D80B, белый, чёрный и красный Pinterest #E60023. Это макет, на сайте ничего не изменено.</p>
+  <p>Прокручивайте страницу колёсиком мыши. <b>Р1–Р5</b> — за блоком «Что говорят заказчики» на сером фоне, <b>Ч1–Ч5</b> — в чёрном блоке «Начнём с вашего пространства». Буквы (движутся на 70 % медленнее, огромные: верх и низ букв срезаны краями блока, видна только середина; смещение вверх 60/40) едут слева направо от края до края экрана, пока вы листаете, и обрезаются краями блока, как в макете habito. Цвета студии: салатовый #B6D80B, белый, чёрный и красный Pinterest #E60023. Это макет, на сайте ничего не изменено.</p>
 </div>
 <main id="list"></main>
 <div class="gap"></div>
@@ -118,7 +118,7 @@ function tick(){var vh=innerHeight,vw=innerWidth,cur='';
    if(fx==='k3'){var sp=1+Math.abs(window.__v||0)*0.02;w.style.animationDuration=(38/Math.min(4,sp))+'s';return;}
    var ww=w.scrollWidth,dir=+w.dataset.dir;
    /* слева направо: от «слово почти целиком слева за краем» до «почти целиком справа за краем» */
-   var from=-ww*0.85,to=vw-ww*0.15,x=dir>0?from+(to-from)*p:to-(to-from)*p;
+   var a0=-ww*0.85,a1=vw-ww*0.15,mid=(a0+a1)/2,hf=(a1-a0)/2*0.3,from=mid-hf,to=mid+hf,x=dir>0?from+(to-from)*p:to-(to-from)*p;
    if(red)x=(vw-ww)/2;
    w.style.transform='translate('+x.toFixed(1)+'px,-50%)';});
   if(fx==='r4')b.querySelector('.bw').style.setProperty('--f',(Math.min(1,p*1.6)*100).toFixed(1)+'%');
