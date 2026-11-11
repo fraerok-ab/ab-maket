@@ -81,7 +81,7 @@ var st=document.createElement('style');st.textContent='.v1>div.t strong,.v4>div.
 /* 3 — счёт */
 function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var ss=e.target.querySelectorAll('strong');ss.forEach(function(s){var to=+s.dataset.v,pre=s.dataset.p||'',plus=s.querySelector('em')?'<em>+</em>':'',from=to>2000?(to==2011?1990:0):0,t0=null,D=1300;
-if(red){return;}function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/D),e2=1-Math.pow(1-k,3);s.innerHTML=pre+fmt(Math.round(from+(to-from)*e2))+plus;if(k<1)requestAnimationFrame(f);else{s.classList.add('pop');}}requestAnimationFrame(f);});});},{threshold:.6});
+if(red){return;}function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/D),e2=1-Math.pow(1-k,3);var cur=Math.round(from+(to-from)*e2);s.innerHTML=pre+(pre?String(cur):fmt(cur))+plus;if(k<1)requestAnimationFrame(f);else{s.classList.add('pop');}}requestAnimationFrame(f);});});},{threshold:.6});
 io.observe(document.querySelector('.v3'));
 /* 5 — прокрутка */
 var b5=document.querySelector('.v5'),s5=b5.querySelectorAll('strong');
