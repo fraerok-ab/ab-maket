@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>А+Б — макет: отзыв с фото и видео со стройки, 5 вариантов (11.11.2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#B6D80B;--ink:#111;--mut:#6e6e73;--bg:#F2F2F4}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Golos Text",Arial,sans-serif;color:var(--ink);background:#fff}
+.wrap{max-width:1230px;margin:0 auto;padding:0 24px}
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+.top .wrap{display:flex;align-items:center;gap:8px;height:56px}.top b{margin-right:auto;font-size:14px}
+.top a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#f1ece6;color:#111;text-decoration:none;font-weight:600}
+.intro{padding:30px 0 4px}.intro h1{font:500 32px Cormorant,Georgia,serif;text-transform:uppercase;margin:0 0 8px}.intro p{margin:0 0 6px;color:#555;max-width:900px;line-height:1.5}
+.tag{display:flex;align-items:center;gap:12px;padding:40px 0 14px}
+.tag .n{width:44px;height:44px;border-radius:50%;background:var(--g);display:grid;place-items:center;font:700 18px "Golos Text"}
+.tag b{font:500 24px Cormorant,Georgia,serif;text-transform:uppercase}.tag span{color:#666;font-size:14px}
+.sec{background:var(--bg);border-radius:20px;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.card{background:#fff;border:1px solid rgba(17,17,17,.08);border-radius:20px;padding:22px 22px 18px;box-shadow:0 2px 14px rgba(0,0,0,.05);transition:box-shadow .3s}
+.card .q{font:600 34px/0.6 Cormorant,Georgia,serif;color:var(--g);height:16px}
+.card p{margin:8px 0 0;font-size:14.5px;line-height:1.55}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;font-size:12px;color:var(--mut)}
+.meta b{color:#111;font-weight:600}
+.src{background:#F1ECE6;border-radius:6px;padding:3px 8px;font-size:11.5px;color:#111;white-space:nowrap}
+.date{display:inline-flex;align-items:center;gap:6px;background:#111;color:#fff;border-radius:6px;padding:4px 9px;font-size:11.5px;margin-top:12px}
+.date i{width:6px;height:6px;border-radius:50%;background:var(--g)}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:14px;height:38px;padding:0 4px 0 14px;border-radius:999px;border:0;background:#111;color:#fff;font:600 13px "Golos Text";cursor:pointer}
+.more i{width:30px;height:30px;border-radius:50%;background:var(--g);color:#111;display:grid;place-items:center;font-style:normal;transition:transform .3s}
+.open .more i{transform:rotate(180deg)}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px}
+.thumbs img,.thumbs .vid{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block;cursor:zoom-in}
+.thumbs .plus{position:relative}.thumbs .plus::after{content:attr(data-n);position:absolute;inset:0;border-radius:10px;background:rgba(17,17,17,.55);color:#fff;display:grid;place-items:center;font:600 16px "Golos Text"}
+.vid{position:relative;overflow:hidden;border-radius:10px;background:#000}
+.vid video{width:100%;height:100%;object-fit:cover;display:block}
+.vid .pl{position:absolute;inset:auto auto 6px 6px;background:rgba(0,0,0,.6);color:#fff;font-size:10.5px;border-radius:4px;padding:2px 5px}
+.full{display:none;margin-top:16px;border-top:1px solid #eee;padding-top:14px}
+.open .full{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;cursor:zoom-in}
+.gal .vid{aspect-ratio:9/16;grid-row:span 2}
+.cap{font-size:12px;color:var(--mut);margin:10px 0 0}
+.dummy p{color:#444}
+/* 2 — видео сбоку */
+.v2 .card.big{display:grid;grid-template-columns:150px 1fr;gap:16px}
+.v2 .card.big .vid{aspect-ratio:9/16;max-height:260px}
+.v2 .open.big{grid-column:1/-1;grid-template-columns:220px 1fr}
+.v2 .open.big .vid{max-height:390px}
+/* 4 — раскрытие на всю ширину */
+.v4 .open{grid-column:1/-1}
+.v4 .coll{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:6px;margin-top:14px;height:220px}
+.v4 .coll>*{border-radius:10px;overflow:hidden}.v4 .coll img{width:100%;height:100%;object-fit:cover;display:block}
+.v4 .coll .a{grid-row:span 2}
+.v4 .open .gal{grid-template-columns:repeat(5,1fr)}
+/* 5 — по этапам */
+.steps{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.steps span{font-size:11.5px;border:1px solid #ddd;border-radius:6px;padding:3px 8px}
+.steps span.on{background:var(--g);border-color:var(--g)}
+.stage{margin-top:12px}.stage h4{margin:0 0 6px;font-size:12px;color:var(--mut);font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+.stage .row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.stage .row img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+/* модальное окно (3) */
+dialog{border:0;border-radius:20px;padding:0;width:min(980px,94vw);max-height:92vh;overflow:auto}
+dialog::backdrop{background:rgba(10,10,10,.6)}
+.dlg{display:grid;grid-template-columns:1.3fr 1fr}
+.dlg .media{background:#111;position:relative;min-height:420px;display:grid;place-items:center}
+.dlg .media img,.dlg .media video{max-width:100%;max-height:78vh;display:block}
+.dlg .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:#fff;cursor:pointer;font-size:18px}
+.dlg .prev{left:10px}.dlg .next{right:10px}
+.dlg .txt{padding:26px}.dlg .dots{display:flex;gap:5px;flex-wrap:wrap;margin-top:14px}.dlg .dots img{width:44px;height:44px;object-fit:cover;border-radius:6px;opacity:.55;cursor:pointer}.dlg .dots img.on{opacity:1;outline:2px solid var(--g)}
+.x{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:0;background:#fff;cursor:pointer;z-index:2}
+.zoom{position:fixed;inset:0;background:rgba(10,10,10,.85);display:none;place-items:center;z-index:100;cursor:zoom-out}.zoom img{max-width:92vw;max-height:90vh;border-radius:10px}
+.note{position:fixed;right:16px;bottom:16px;z-index:60;background:#111;color:#fff;border-radius:14px;padding:10px 14px;font-size:12px;line-height:1.4;max-width:300px}.note b{color:var(--g)}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.v2 .card.big,.v2 .open.big{grid-template-columns:1fr}.v2 .card.big .vid{max-height:320px;max-width:200px}.v4 .open .gal{grid-template-columns:repeat(3,1fr)}.dlg{grid-template-columns:1fr}.dlg .media{min-height:300px}.note{left:16px;right:16px;max-width:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><b>А+Б · отзыв с фото и видео</b><a href="#v1">1</a><a href="#v2">2</a><a href="#v3">3</a><a href="#v4">4</a><a href="#v5">5</a></div></header>
+<div class="wrap intro"><h1>Отзыв с фото и видео со стройки: 5 вариантов</h1>
+<p>В каждом варианте одна «живая» карточка — сообщение заказчика с датой, превью фото и видео со стройки и кнопкой «Открыть отзыв полностью». Рядом обычные короткие отзывы, чтобы видеть, как это смотрится в ленте. Видео ужато по габаритам (вертикальное превью вписано в карточку), а не по длительности.</p>
+<p><b>Важно:</b> в макете вместо фото и видео заказчика стоят фото нашей реализации в Завидово — сами фото и видео из чата «Проект Андрей Воловин_2» к Claude ещё не попали (их нет ни на Диске, ни в загрузках Telegram). Текст — из вашего скриншота. Это макет, на сайте ничего не изменено.</p></div>
+<main id="list"></main>
+<div class="zoom" id="zoom"><img alt=""></div>
+<dialog id="dlg"><button class="x" type="button" aria-label="Закрыть">×</button><div class="dlg"><div class="media"><button class="nav prev" type="button">‹</button><div id="dm"></div><button class="nav next" type="button">›</button></div><div class="txt" id="dt"></div></div></dialog>
+<div class="note"><b>Макет 11.11.2026.</b> Номер варианта — в кружке и в шапке. Фото и видео — заглушки, нужны медиа из чата Воловина.</div>
+<script>
+var S='https://aplusbdesign.pro/wp-content/themes/aplusb/assets/realization/zavidovo-full/img-';
+var P=['2057','2059','2060','2063','2069','2070','2072'].map(function(n){return S+n+'-480.webp';});
+var VID='demo-vertical.mp4';
+var TEXT='У нас небольшие изменения по цвету паркетной доски, и плитка та, что с чёрными квадратиками, — выбрали без рисунка под мрамор. Можно от вас небольшой совет по выбору цвета керамогранита? Он пойдёт на отделку откосов.';
+var WHO='Андрей В.', SRC='Telegram', DATE='Ноябрь 2026 · ремонт идёт', TITLE='Дом 182 м²';
+var DUM=[['Было очень приятно работать с вами. Такое внимание к деталям в сочетании с чувством вкуса, на которое можно положиться, редко встречается.','Марина А.','13 августа 2026'],['Вы очень точно попали в запрос с первого раза. Чувствуется тёплая и уютная атмосфера не в ущерб стильному и современному образу.','Антон З.','20 февраля 2025']];
+function vid(cls){return '<div class="vid '+(cls||'')+'"><video src="'+VID+'" muted loop playsinline preload="metadata" poster="'+P[2]+'"></video><span class="pl">▶ 0:21</span></div>';}
+function dummy(d){return '<div class="card dummy"><div class="q">“</div><p>«'+d[0]+'»</p><div class="meta"><span><b>'+d[1]+'</b> · '+d[2]+'</span><span class="src">Telegram</span></div></div>';}
+function head(){return '<div class="q">“</div><p>«'+TEXT+'»</p><span class="date"><i></i>'+DATE+'</span><div class="meta"><span><b>'+WHO+'</b> · '+TITLE+'</span><span class="src">'+SRC+'</span></div>';}
+function btn(t){return '<button class="more" type="button" data-toggle>'+(t||'Открыть отзыв полностью')+'<i>↓</i></button>';}
+function gal(){return '<div class="gal">'+vid()+P.map(function(p){return '<img src="'+p+'" alt="Фото со стройки" loading="lazy">';}).join('')+'</div><p class="cap">7 фото и видео из переписки · '+DATE+'</p>';}
+var V=[
+['Превью + раскрытие вниз','4 миниатюры (видео первым, последняя «+5»), кнопка раскрывает карточку вниз — все фото и видео сеткой',function(){
+ return '<div class="card big">'+head()+'<div class="thumbs">'+vid()+'<img src="'+P[0]+'" alt=""><img src="'+P[1]+'" alt=""><div class="plus" data-n="+5"><img src="'+P[2]+'" alt=""></div></div>'+btn()+'<div class="full">'+gal()+'</div></div>'+dummy(DUM[0])+dummy(DUM[1]);}],
+['Видео сбоку','вертикальное видео-превью слева, текст справа; раскрытие растягивает карточку на всю ширину ленты и показывает галерею',function(){
+ return '<div class="card big">'+vid()+'<div>'+head()+btn()+'<div class="full">'+gal()+'</div></div></div>'+dummy(DUM[0])+dummy(DUM[1]);}],
+['Окно-просмотрщик','карточка компактная, «Открыть полностью» открывает окно: слева фото/видео со стрелками, справа текст; миниатюры снизу',function(){
+ return '<div class="card">'+head()+'<div class="thumbs">'+vid()+'<img src="'+P[0]+'" alt=""><img src="'+P[1]+'" alt=""><div class="plus" data-n="+5"><img src="'+P[2]+'" alt=""></div></div>'+btn('Открыть полностью').replace('data-toggle','data-dlg')+'</div>'+dummy(DUM[0])+dummy(DUM[1]);}],
+['Коллаж + на всю ширину','в карточке коллаж (видео крупно + 2 фото), раскрытие разворачивает карточку на всю ширину блока отзывов',function(){
+ return '<div class="card big">'+head()+'<div class="coll"><div class="a">'+vid().replace('class="vid ','class="vid " style="height:100%"')+'</div><img src="'+P[0]+'" alt=""><img src="'+P[1]+'" alt=""></div>'+btn()+'<div class="full">'+gal()+'</div></div>'+dummy(DUM[0])+dummy(DUM[1]);}],
+['По этапам ремонта','метки этапов (проект → стройка → готово) с датами; раскрытие показывает фото по этапам, видео в своём этапе',function(){
+ return '<div class="card big">'+head()+'<div class="steps"><span>Проект · 2026</span><span class="on">Стройка · ноябрь 2026</span><span>Готово · скоро</span></div><div class="thumbs">'+vid()+'<img src="'+P[0]+'" alt=""><img src="'+P[1]+'" alt=""><div class="plus" data-n="+5"><img src="'+P[2]+'" alt=""></div></div>'+btn('Открыть отзыв полностью')+'<div class="full"><div class="stage"><h4>Стройка · ноябрь 2026 — видео</h4><div style="max-width:220px">'+vid()+'</div></div><div class="stage"><h4>Стройка · ноябрь 2026 — фото</h4><div class="row">'+P.slice(0,4).map(function(p){return '<img src="'+p+'" alt="">';}).join('')+'</div></div><div class="stage"><h4>Отделка · материалы</h4><div class="row">'+P.slice(4).map(function(p){return '<img src="'+p+'" alt="">';}).join('')+'</div></div></div></div>'+dummy(DUM[0])+dummy(DUM[1]);}]];
+var h='';V.forEach(function(v,i){var n=i+1;h+='<section id="v'+n+'" class="wrap"><div class="tag"><div class="n">'+n+'</div><div><b>Вариант '+n+' — '+v[0]+'</b><br><span>'+v[1]+'</span></div></div><div class="sec v'+n+'"><div class="grid">'+v[2]()+'</div></div></section>';});
+document.getElementById('list').innerHTML=h;
+document.addEventListener('click',function(e){var t=e.target.closest('[data-toggle]');if(t){var c=t.closest('.card');c.classList.toggle('open');t.firstChild.nodeValue=c.classList.contains('open')?'Свернуть отзыв':'Открыть отзыв полностью';c.querySelectorAll('.full video').forEach(function(v){v.play().catch(function(){});});return;}
+var d=e.target.closest('[data-dlg]');if(d){openDlg(0);return;}
+var im=e.target.closest('.gal img,.thumbs img,.stage img,.coll img');if(im&&!im.closest('.plus')){var z=document.getElementById('zoom');z.querySelector('img').src=im.src.replace('-480.webp','-1280.webp');z.style.display='grid';return;}
+if(e.target.closest('.plus')){var c2=e.target.closest('.card');var b=c2.querySelector('[data-toggle]');if(b)b.click();else openDlg(3);}
+if(e.target.closest('#zoom'))document.getElementById('zoom').style.display='none';});
+document.querySelectorAll('.vid video').forEach(function(v){v.closest('.vid').addEventListener('mouseenter',function(){v.play().catch(function(){});});v.closest('.vid').addEventListener('mouseleave',function(){v.pause();});});
+var dlg=document.getElementById('dlg'),items=[{v:VID}].concat(P.map(function(p){return {i:p.replace('-480.webp','-1280.webp'),t:p};})),cur=0;
+function show(i){cur=(i+items.length)%items.length;var it=items[cur];document.getElementById('dm').innerHTML=it.v?'<video src="'+it.v+'" controls autoplay playsinline style="max-height:78vh"></video>':'<img src="'+it.i+'" alt="">';dlg.querySelectorAll('.dots img').forEach(function(x,k){x.classList.toggle('on',k===cur);});}
+function openDlg(i){document.getElementById('dt').innerHTML='<div class="q" style="font:600 34px/0.6 Cormorant,Georgia,serif;color:#B6D80B;height:16px">“</div><p style="font-size:15px;line-height:1.6">«'+TEXT+'»</p><span class="date"><i></i>'+DATE+'</span><div class="meta"><span><b>'+WHO+'</b> · '+TITLE+'</span><span class="src">'+SRC+'</span></div><div class="dots">'+items.map(function(it,k){return '<img src="'+(it.t||P[2])+'" data-k="'+k+'" alt="">';}).join('')+'</div>';
+ dlg.querySelectorAll('.dots img').forEach(function(x){x.onclick=function(){show(+x.dataset.k);};});dlg.showModal();show(i);}
+dlg.querySelector('.prev').onclick=function(){show(cur-1);};dlg.querySelector('.next').onclick=function(){show(cur+1);};dlg.querySelector('.x').onclick=function(){dlg.close();};
+</script>
+</body>
+</html>
